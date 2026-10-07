@@ -1,0 +1,25 @@
+{
+  "name": "bsgs-dlog-lab",
+  "version": "1.0.0",
+  "description": "教学用小素数域 Baby-step Giant-step 离散对数搜索后端（API + CLI）",
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": {
+    "dlog": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/*.test.ts",
+    "start": "node dist/server.js",
+    "dev": "node --experimental-strip-types src/server.ts",
+    "demo": "node --experimental-strip-types src/cli.ts demo"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}
