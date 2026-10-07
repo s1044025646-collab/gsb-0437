@@ -1,0 +1,21 @@
+﻿{
+  "name": "bsgs-dlog-backend",
+  "version": "1.0.0",
+  "description": "教学用小素数域 Baby-step Giant-step 离散对数与碰撞见证核验后端（API + CLI）",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --experimental-transform-types --import ./scripts/register-ts.mjs --test tests/*.test.ts",
+    "start": "node --experimental-transform-types --import ./scripts/register-ts.mjs src/server.ts",
+    "demo": "node --experimental-transform-types --import ./scripts/register-ts.mjs src/cli.ts demo",
+    "cli": "node --experimental-transform-types --import ./scripts/register-ts.mjs src/cli.ts"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.9.0"
+  }
+}
